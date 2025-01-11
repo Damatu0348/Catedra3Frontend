@@ -34,7 +34,7 @@ export class LoginComponent {
           // Guardar el token en localStorage
           localStorage.setItem('token', response.token);
           // Navegar a la vista de listado de posts
-          console.log('Usuario logueado')
+          console.log('Credenciales validas')
           //this.router.navigate(['/posts']);
         },
         (error) => {
@@ -43,5 +43,9 @@ export class LoginComponent {
         }
       );
     }
+  }
+
+  goToRegister() {
+    this.router.navigate(['/register']); // Navega a la página register
   }
 }
